@@ -4,7 +4,7 @@ import { ArrayField } from "@/components/admin/array-field";
 import { SingleFieldList } from "@/components/admin/single-field-list";
 import { TextField } from "@/components/admin/text-field";
 import { EmailField } from "@/components/admin/email-field";
-import { Mail, Phone, Linkedin, Check } from "lucide-react";
+import { Mail, Phone, Linkedin, Check, Cake } from "lucide-react";
 import type { ReactNode } from "react";
 import {
   contactGender,
@@ -47,6 +47,12 @@ export const ContactPersonalInfo = () => {
               LinkedIn
             </a>
           }
+        />
+      )}
+      {record.birth_date && (
+        <PersonalInfoRow
+          icon={<Cake className="w-4 h-4 text-muted-foreground" />}
+          primary={<span>{record.birth_date}</span>}
         />
       )}
       <ArrayField source="phone_jsonb">

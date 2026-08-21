@@ -17,6 +17,7 @@ import { RadioButtonGroupInput } from "@/components/admin/radio-button-group-inp
 import { SelectInput } from "@/components/admin/select-input";
 import { ArrayInput } from "@/components/admin/array-input";
 import { SimpleFormIterator } from "@/components/admin/simple-form-iterator";
+import { DateInput } from "@/components/admin/date-input";
 
 import { isLinkedinUrl } from "../misc/isLinkedInUrl";
 import { StatusSelector } from "../notes";
@@ -195,6 +196,7 @@ const ContactPersonalInformationInputs = () => {
           />
         </SimpleFormIterator>
       </ArrayInput>
+      <DateInput source="birth_date" helperText={false} />
       <TextInput
         source="linkedin_url"
         helperText={false}
