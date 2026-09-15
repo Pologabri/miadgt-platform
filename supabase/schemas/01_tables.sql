@@ -49,7 +49,8 @@ create table public.contacts (
     sales_id bigint,
     linkedin_url text,
     email_jsonb jsonb,
-    phone_jsonb jsonb
+    phone_jsonb jsonb,
+    address text
 );
 
 create table public.contact_notes (
@@ -76,7 +77,16 @@ create table public.deals (
     archived_at timestamp with time zone,
     expected_closing_date date,
     sales_id bigint,
-    index smallint
+    index smallint,
+    event_date date,
+    people_count integer,
+    occasion text,
+    payment_note text,
+    address text,
+    chat text,
+    confidence numeric,
+    source_message_ids text,
+    message_ts timestamp with time zone
 );
 
 create table public.deal_notes (
